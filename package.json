@@ -1,0 +1,30 @@
+{
+  "name": "autosos",
+  "version": "2.0.0",
+  "description": "AutoSOS - Voice-Activated Emergency Alert System by Vision Crew",
+  "main": "api_server.js",
+  "scripts": {
+    "start": "node api_server.js",
+    "local": "node whatsapp_service.js",
+    "test": "node whatsapp_service.js"
+  },
+  "keywords": [
+    "emergency",
+    "alert",
+    "whatsapp",
+    "wake-word",
+    "baileys"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "multer": "^2.0.2",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

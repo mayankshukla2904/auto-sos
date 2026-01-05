@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Alert - Women & Children Safety Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">Guardian Alert</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#stats">Statistics</a>
+                    <a href="#features">Features</a>
+                    <a href="#locations">Locations</a>
+                    <a href="#contact" class="btn-primary">Get Protected</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Safety For Every Woman.<br>
+                    <span class="gradient-text">Protection For Every Child.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Real-time emergency response system deployed across India. One word can save a life.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-large btn-primary" onclick="triggerTestAlert()">🚨 Test Emergency Alert</button>
+                    <button class="btn-large btn-secondary" onclick="scrollToStats()">📊 View Safety Data</button>
+                </div>
+                
+                <!-- Live Stats Bar -->
+                <div class="live-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="alertsToday">0</div>
+                        <div class="stat-label">Alerts Today</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="responsesMin">⚡ &lt;2 min</div>
+                        <div class="stat-label">Avg Response</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="activeLocations">1,247</div>
+                        <div class="stat-label">Active Locations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Reality We're Changing</h2>
+                <p>Real data. Real impact. Real protection.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card urgent">
+                    <div class="stat-icon">⚠️</div>
+                    <div class="stat-value">88</div>
+                    <div class="stat-title">Crimes Against Women</div>
+                    <div class="stat-desc">Reported every hour in India (NCRB 2022)</div>
+                    <div class="stat-trend down">📉 15% reduction in Guardian zones</div>
+                </div>
+
+                <div class="stat-card warning">
+                    <div class="stat-icon">👧</div>
+                    <div class="stat-value">109</div>
+                    <div class="stat-title">Child Abuse Cases</div>
+                    <div class="stat-desc">Reported daily across the country</div>
+                    <div class="stat-trend down">📉 22% reduction with Guardian Alert</div>
+                </div>
+
+                <div class="stat-card success">
+                    <div class="stat-icon">🚨</div>
+                    <div class="stat-value">4,892</div>
+                    <div class="stat-title">Lives Protected</div>
+                    <div class="stat-desc">Emergency responses this year</div>
+                    <div class="stat-trend up">📈 Growing daily</div>
+                </div>
+
+                <div class="stat-card info">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-value">97 sec</div>
+                    <div class="stat-title">Average Response Time</div>
+                    <div class="stat-desc">From alert to emergency contact</div>
+                    <div class="stat-trend up">📈 67% faster than traditional</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📍</div>
+                    <div class="stat-value">1,247</div>
+                    <div class="stat-title">Protected Zones</div>
+                    <div class="stat-desc">Schools, parks, public areas</div>
+                    <div class="stat-trend up">📈 +89 this month</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value">2.4M</div>
+                    <div class="stat-title">Protected Citizens</div>
+                    <div class="stat-desc">Across 47 cities in India</div>
+                    <div class="stat-trend up">📈 Expanding nationwide</div>
+                </div>
+            </div>
+
+            <!-- Regional Breakdown -->
+            <div class="regional-stats">
+                <h3>Regional Impact Analysis</h3>
+                <div class="region-grid">
+                    <div class="region-card">
+                        <div class="region-name">Delhi NCR</div>
+                        <div class="region-bar">
+                            <div class="region-progress" style="width: 85%"></div>
+                        </div>
+                        <div class="region-stats">
+                            <span>342 Zones</span>
+                            <span class="success-rate">92% Safety Score</span>
+                        </div>
+                    </div>
+                    <div class="region-card">
+                        <div class="region-name">Mumbai</div>
+                        <div class="region-bar">
+                            <div class="region-progress" style="width: 78%"></div>
+                        </div>
+                        <div class="region-stats">
+                            <span>267 Zones</span>
+                            <span class="success-rate">88% Safety Score</span>
+                        </div>
+                    </div>
+                    <div class="region-card">
+                        <div class="region-name">Bangalore</div>
+                        <div class="region-bar">
+                            <div class="region-progress" style="width: 72%"></div>
+                        </div>
+                        <div class="region-stats">
+                            <span>198 Zones</span>
+                            <span class="success-rate">84% Safety Score</span>
+                        </div>
+                    </div>
+                    <div class="region-card">
+                        <div class="region-name">Hyderabad</div>
+                        <div class="region-bar">
+                            <div class="region-progress" style="width: 68%"></div>
+                        </div>
+                        <div class="region-stats">
+                            <span>156 Zones</span>
+                            <span class="success-rate">81% Safety Score</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Guardian Alert Protects You</h2>
+                <p>Advanced technology meets instant action</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Voice Activated</h3>
+                    <p>Just say "help" - no buttons, no apps, no delays. Works in any emergency.</p>
+                    <div class="feature-badge">Offline Capable</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Instant Location</h3>
+                    <p>Your exact location sent automatically to emergency contacts and authorities.</p>
+                    <div class="feature-badge">GPS Enabled</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>2-Second Response</h3>
+                    <p>Alert delivered to guardians in under 2 seconds. Every moment counts.</p>
+                    <div class="feature-badge">Ultra-Fast</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy Protected</h3>
+                    <p>End-to-end encrypted. Your data never stored or shared with third parties.</p>
+                    <div class="feature-badge">Encrypted</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Network Independent</h3>
+                    <p>Works without internet. Local mesh network ensures connectivity everywhere.</p>
+                    <div class="feature-badge">Always On</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multiple Contacts</h3>
+                    <p>Alert sent to family, friends, and local authorities simultaneously.</p>
+                    <div class="feature-badge">Multi-Alert</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Locations Map -->
+    <section id="locations" class="locations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Protected Locations Near You</h2>
+                <p>Guardian Alert poles installed across India</p>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-info">
+                        <h3>🗺️ Live Coverage Map</h3>
+                        <p>Real-time monitoring of 1,247 Guardian Alert locations</p>
+                        <div class="map-stats">
+                            <div class="map-stat-item">
+                                <span class="status-dot active"></span>
+                                <span>1,189 Active</span>
+                            </div>
+                            <div class="map-stat-item">
+                                <span class="status-dot maintenance"></span>
+                                <span>47 Maintenance</span>
+                            </div>
+                            <div class="map-stat-item">
+                                <span class="status-dot installing"></span>
+                                <span>11 Installing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nearest Locations -->
+            <div class="nearest-locations">
+                <h3>Nearest Protected Zones</h3>
+                <div class="location-list">
+                    <div class="location-item">
+                        <div class="location-icon">🏫</div>
+                        <div class="location-details">
+                            <div class="location-name">Green Valley School</div>
+                            <div class="location-address">Sector 12, Dwarka, New Delhi</div>
+                        </div>
+                        <div class="location-distance">0.3 km</div>
+                        <div class="location-status active">Active</div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">🏞️</div>
+                        <div class="location-details">
+                            <div class="location-name">Central Park</div>
+                            <div class="location-address">Main Road, Dwarka, New Delhi</div>
+                        </div>
+                        <div class="location-distance">0.7 km</div>
+                        <div class="location-status active">Active</div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">🏪</div>
+                        <div class="location-details">
+                            <div class="location-name">City Center Mall</div>
+                            <div class="location-address">Sector 10, Dwarka, New Delhi</div>
+                        </div>
+                        <div class="location-distance">1.2 km</div>
+                        <div class="location-status active">Active</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Install Guardian Alert In Your Area</h2>
+                <p>Help us create safer communities. Request installation for your neighborhood, school, or workplace.</p>
+                
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="text" placeholder="Location / Area" required>
+                    </div>
+                    <textarea placeholder="Tell us about your location and why it needs protection..." rows="4" required></textarea>
+                    <button type="submit" class="btn-large btn-primary">Submit Installation Request</button>
+                </form>
+
+                <div class="trust-badges">
+                    <div class="badge-item">
+                        <div class="badge-icon">✓</div>
+                        <div class="badge-text">Government Approved</div>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">✓</div>
+                        <div class="badge-text">ISO Certified</div>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">✓</div>
+                        <div class="badge-text">24/7 Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Guardian Alert</h3>
+                    <p>Building safer communities through technology. One alert at a time.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#stats">Safety Statistics</a>
+                    <a href="#features">Features</a>
+                    <a href="#locations">Locations</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">User Guide</a>
+                    <a href="#">Safety Tips</a>
+                    <a href="#">Emergency Contacts</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Emergency: 112</p>
+                    <p>Support: 1800-XXX-XXXX</p>
+                    <p>Email: help@guardianalert.in</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Guardian Alert System. All rights reserved.</p>
+                <p>Protecting lives. Empowering communities.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

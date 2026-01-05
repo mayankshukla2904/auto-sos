@@ -1,0 +1,43 @@
+{
+  "whatsapp": {
+    "recipients": [
+      "919821080931@s.whatsapp.net",
+      "917011147883@s.whatsapp.net"
+    ],
+    "alertMessage": "🚨 EMERGENCY ALERT 🚨\n\nHelp needed immediately!\n\nLocation: {location}\nTime: {time}\nDate: {date}\n\nThis is an automated emergency message from AutoSOS.\nDeveloped by Vision Crew\n\nPlease respond immediately!",
+    "defaultLocation": "School",
+    "port": 3000
+  },
+  "detection": {
+    "wakeWords": [
+      "help",
+      "help me", 
+      "stop",
+      "save me",
+      "call police",
+      "bachao",
+      "madad",
+      "bachao mujhe",
+      "chhod do",
+      "chor",
+      "bachao karo",
+      "banchao",
+      "sahajjo korun",
+      "amake bachao",
+      "kaappathu",
+      "uthavi",
+      "ennai kaappathu",
+      "rakshinchu",
+      "sahayam",
+      "nannu rakshinchu",
+      "vachva",
+      "madat kara",
+      "mala vachva",
+      "bachavo",
+      "mane bachavo"
+    ],
+    "sensitivity": 0.5,
+    "cooldownSeconds": 5,
+    "audioDeviceIndex": null
+  }
+}

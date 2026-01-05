@@ -1,0 +1,18 @@
+# Python dependencies for Emergency Alert System
+
+# Wake word detection - choose ONE:
+
+# Option 1: Porcupine (recommended - lightweight, fast, requires custom model for "help")
+pvporcupine>=2.2.0
+
+# Option 2: Vosk (heavier but works with any word including "help" out-of-the-box)
+vosk>=0.3.45
+
+# Audio capture
+pyaudio>=0.2.13
+
+# HTTP client
+requests>=2.31.0
+
+# Optional: for better audio handling
+numpy>=1.24.0
